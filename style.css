@@ -34,3 +34,11 @@ section {
     padding-top: 5rem;
 }
 
+.moment-img {
+    width: 100%;
+}
+
+#moment .row > * {
+    padding: 0;
+}
+

@@ -9,7 +9,9 @@
 
     <!-- My css -->
     <link rel="stylesheet" href="style.css" />
-    <title>Fikri | Portfolio</title>
+    <!-- AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <title>Fikri | Website</title>
   </head>
   <body id="home">
     <!-- Navbar -->
@@ -41,7 +43,7 @@
 
     <!-- Jumbotron -->
     <section class="jumbotron text-center">
-      <img src="img/fikk.jpeg" alt="fikri" width="100" class="rounded-circle img-thumbnail" />
+      <img src="img/fikk.jpeg" alt="fikri" width="100" class="rounded-circle img-thumbnail"  />
       <h1 class="display-4">MUH FIKRI</h1>
       <p class="lead">MAHASISWA | TEKNIK INFORMATIKA</p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
@@ -63,10 +65,10 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
             <p>Mahasiswa adalah seseorang yang sedang dalam proses menimba ilmu ataupun belajar dan terdaftar sedang menjalani pendidikan pada salah satu perguruan tinggi.</p>
           </div>
-          <div class="col-md-4">
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000">
             <p>mempelajari Informatika kita dilatih untuk menguasai suatu teknologi dan diharapkan dapat menciptakan teknologi baru.</p>
           </div>
         </div>
@@ -91,17 +93,17 @@
         </div>
         <div class="row">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="200">
               <img src="img/MUH FIKRI.png" class="card-img-top" alt="sertifikat1" />
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card"data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/MUH FIKRI2.jpeg" class="card-img-top" alt="sertifikat2" />
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card"data-aos="flip-left"data-aos-duration="500" data-aos-delay="400">
               <img src="img/MUH FIKRI3.jpeg" class="card-img-top" alt="sertifikat3" />
             </div>
           </div>
@@ -116,6 +118,70 @@
       </svg>
     </section>
     <!-- Akhir Projects -->
+
+    <!-- Moment -->
+    <section id="moment">
+      <div class="container">
+        <div class="row text-center mb-3">
+          <div class="col">
+            <h2>Moment</h2>
+          </div>
+        </div>
+        <div class="row justify-content-center">
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/zimbra.png" alt="gambar 1" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/7.jpg" alt="gambar 2" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/launcing.jpeg" alt="gambar 3" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/2.jpeg" alt="gambar 4" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/3.jpeg" alt="gambar 5" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/4.jpeg" alt="gambar 6" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/1.jpeg" alt="gambar 7" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/6.jpg" alt="gambar zimbra" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/ngmpus.jpeg" alt="gambar 9" class="img-fluid moment-img">
+            </a>
+          </div>
+          <div class="col-md-3">
+            <a href="">
+              <img src="img/moment/terjun.jpeg" alt="gambar 10" class="img-fluid moment-img">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Akhir Moment -->
 
     <!-- Contact -->
     <section id="contact">
@@ -173,6 +239,24 @@
     <!-- script -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+
+    <!-- js AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      const momentImage = document.querySelectorAll('.moment-img');
+
+      momentImage.forEach((img, i) => {
+        img.dataset.aos = 'fade-down';
+        img.dataset.aosDelay = i * 100;
+        img.dataset.aosDuration = 1000;
+      })
+
+
+      AOS.init();
+    </script>
+    <!-- akhir AOS -->
+
+    <!-- form js -->
     <script>
       const scriptURL = "https://script.google.com/macros/s/AKfycbzLGahIJDZgBgRaIMbAhSFG31rtotoMP8ll-wGaYVKtJvXXy05s1RJuXAlkvW7idR5p/exec";
       const form = document.forms["contact-form-fikri"];
@@ -192,7 +276,7 @@
             btnLoading.classList.toggle("d-none");
             btnKirim.classList.toggle("d-none");
             //tampilkan alert
-            myAlert.classList.toggle('d-none');
+            myAlert.classList.toggle("d-none");
             // reset formnya
             form.reset();
             console.log("Success!", response);
